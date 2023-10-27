@@ -1,8 +1,12 @@
-import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
+"use client"; // Denotes it is a client-side component
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
 
 const Topbar = () => {
+  const router = useRouter();
   return (
     <nav className="topbar">
       <Link href="/" className="flex items-center gap-4">
@@ -13,7 +17,7 @@ const Topbar = () => {
       <div className="flex items-center gap-1">
         <div className="block md:hidden">
           <SignedIn>
-            <SignOutButton>
+            <SignOutButton signOutCallback={() => router.push("/sign-in")}>
               <div className="flex cursor-pointer">
                 <Image
                   src="/assets/logout.svg"
