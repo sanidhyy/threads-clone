@@ -32,6 +32,7 @@ const UserCard = ({
             src={imgUrl}
             alt="user_logo"
             fill
+            sizes="48px"
             className="rounded-full object-cover"
           />
         </div>

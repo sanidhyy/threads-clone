@@ -29,6 +29,7 @@ const ProfileHeader = ({
               src={imgUrl}
               alt="logo"
               fill
+              sizes="80px"
               className="rounded-full object-cover shadow-2xl"
             />
           </div>
@@ -48,6 +49,7 @@ const ProfileHeader = ({
                 alt="logout"
                 width={16}
                 height={16}
+                className="h-4 w-4"
               />
 
               <p className="text-light-2 max-sm:hidden">Edit</p>

@@ -30,6 +30,7 @@ const CommunityCard = ({
             src={imgUrl}
             alt="community_logo"
             fill
+            sizes="48px"
             className="rounded-full object-cover"
           />
         </Link>
