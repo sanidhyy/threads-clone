@@ -45,6 +45,7 @@ const UserCard = ({ id, name, username, imgUrl, personType }: Props) => {
             router.push(`/profile/${id}`);
           }
         }}
+        title="View User Profile"
       >
         View
       </Button>
