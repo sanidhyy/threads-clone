@@ -1,7 +1,55 @@
 {
-  "name": "threads",
-  "version": "0.1.0",
+  "name": "threads-clone",
+  "version": "1.0.1",
   "private": true,
+  "author": {
+    "name": "Sanidhya Kumar Verma",
+    "email": "sanidhya.verma12345@gmail.com",
+    "url": "https://github.com/sanidhyy"
+  },
+  "description": "A Next.js 13 Meta Threads application.",
+  "keywords": [
+    "reactjs",
+    "nextjs",
+    "vercel",
+    "react",
+    "threads",
+    "meta",
+    "twitter",
+    "instagram",
+    "meta-threads",
+    "shadcn",
+    "shadcn-ui",
+    "radix-ui",
+    "uploadthing",
+    "clsx",
+    "mongoose",
+    "mongodb",
+    "lucide-react",
+    "next-pwa",
+    "postcss",
+    "prettier",
+    "react-dom",
+    "tailwindcss",
+    "tailwindcss-animate",
+    "ui/ux",
+    "js",
+    "javascript",
+    "typescript",
+    "eslint",
+    "html",
+    "css"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/threads-clone.git"
+  },
+  "homepage": "https://github.com/sanidhyy/threads-clone#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/threads-clone/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -47,5 +95,15 @@
     "typescript": "5.1.6",
     "uploadthing": "^5.2.0",
     "zod": "^3.21.4"
-  }
+  },
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sanidhy"
+    },
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/sanidhy"
+    }
+  ]
 }
