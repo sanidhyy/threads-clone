@@ -32,6 +32,7 @@ const DeleteThread = ({
       width={18}
       height={18}
       className="cursor-pointer object-contain"
+      title="Delete thread"
       onClick={async () => {
         await deleteThread(JSON.parse(threadId), pathname);
         if (!parentId || !isComment) {

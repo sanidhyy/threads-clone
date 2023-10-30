@@ -48,7 +48,11 @@ const ThreadCard = ({
       <div className="flex items-start justify-between">
         <div className="flex w-full flex-1 flex-row gap-4">
           <div className="flex flex-col items-center">
-            <Link href={`/profile/${author.id}`} className="relative h-11 w-11">
+            <Link
+              href={`/profile/${author.id}`}
+              className="relative h-11 w-11"
+              title={`Visit ${author.name}'s profile`}
+            >
               <Image
                 src={author.image}
                 alt="user_community_image"
@@ -61,7 +65,11 @@ const ThreadCard = ({
           </div>
 
           <div className="flex w-full flex-col">
-            <Link href={`/profile/${author.id}`} className="w-fit">
+            <Link
+              href={`/profile/${author.id}`}
+              className="w-fit"
+              title={`Visit ${author.name}'s profile`}
+            >
               <h4 className="cursor-pointer text-base-semibold text-light-1">
                 {author.name}
               </h4>
@@ -77,8 +85,9 @@ const ThreadCard = ({
                   width={24}
                   height={24}
                   className="cursor-pointer object-contain"
+                  title="Like (In Development)"
                 />
-                <Link href={`/thread/${id}`}>
+                <Link href={`/thread/${id}`} title="Reply">
                   <Image
                     src="/assets/reply.svg"
                     alt="heart"
@@ -93,6 +102,7 @@ const ThreadCard = ({
                   width={24}
                   height={24}
                   className="cursor-pointer object-contain"
+                  title="Repost (In Development)"
                 />
                 <Image
                   src="/assets/share.svg"
@@ -100,6 +110,7 @@ const ThreadCard = ({
                   width={24}
                   height={24}
                   className="cursor-pointer object-contain"
+                  title="Share (In Development)"
                 />
               </div>
 
