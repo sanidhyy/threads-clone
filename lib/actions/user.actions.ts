@@ -94,6 +94,26 @@ export const fetchUserPosts = async (userId: string) => {
   }
 };
 
+// check if user exists (by username)
+export const isUser = async ({ username }: { username: string }) => {
+  try {
+    connectToDB();
+
+    const userQuery = await User.findOne({
+      username,
+    });
+
+    if (userQuery) {
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    throw error;
+  }
+};
+
 // Almost similar to Thead (search + pagination) and Community (search + pagination)
 export const fetchUsers = async ({
   userId,
