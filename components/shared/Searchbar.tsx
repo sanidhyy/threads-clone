@@ -10,7 +10,7 @@ interface Props {
   routeType: string;
 }
 
-function Searchbar({ routeType }: Props) {
+const Searchbar = ({ routeType }: Props) => {
   const router = useRouter();
   const [search, setSearch] = useState("");
 
@@ -25,28 +25,28 @@ function Searchbar({ routeType }: Props) {
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [search, routeType]);
+  }, [search, routeType, router]);
 
   return (
-    <div className='searchbar'>
+    <div className="searchbar">
       <Image
-        src='/assets/search-gray.svg'
-        alt='search'
+        src="/assets/search-gray.svg"
+        alt="search"
         width={24}
         height={24}
-        className='object-contain'
+        className="object-contain"
       />
       <Input
-        id='text'
+        id="text"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         placeholder={`${
           routeType !== "/search" ? "Search communities" : "Search creators"
         }`}
-        className='no-focus searchbar_input'
+        className="no-focus searchbar_input"
       />
     </div>
   );
-}
+};
 
 export default Searchbar;

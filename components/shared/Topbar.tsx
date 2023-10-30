@@ -1,10 +1,10 @@
-import { SITE_NAME } from "@/constants";
+import { EXTRA_LINKS, SITE_NAME } from "@/constants";
 import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import Image from "next/image";
 import Link from "next/link";
 
-function Topbar() {
+const Topbar = () => {
   return (
     <nav className="topbar">
       <Link href="/" className="flex items-center gap-4">
@@ -38,9 +38,26 @@ function Topbar() {
             },
           }}
         />
+
+        <div className="flex items-center gap-1">
+          <Link
+            href={EXTRA_LINKS.source_code}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex cursor-pointer"
+            title="Source Code"
+          >
+            <Image
+              src="/assets/github.svg"
+              alt="github"
+              width={24}
+              height={24}
+            />
+          </Link>
+        </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Topbar;

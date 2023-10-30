@@ -38,7 +38,7 @@ interface Props {
   accountType: string;
 }
 
-async function ThreadsTab({ currentUserId, accountId, accountType }: Props) {
+const ThreadsTab = async ({ currentUserId, accountId, accountType }: Props) => {
   let result: Result;
 
   if (accountType === "Community") {
@@ -52,7 +52,7 @@ async function ThreadsTab({ currentUserId, accountId, accountType }: Props) {
   }
 
   return (
-    <section className='mt-9 flex flex-col gap-10'>
+    <section className="mt-9 flex flex-col gap-10">
       {result.threads.map((thread) => (
         <ThreadCard
           key={thread._id}
@@ -80,6 +80,6 @@ async function ThreadsTab({ currentUserId, accountId, accountType }: Props) {
       ))}
     </section>
   );
-}
+};
 
 export default ThreadsTab;

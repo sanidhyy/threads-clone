@@ -10,7 +10,7 @@ interface Props {
   path: string;
 }
 
-function Pagination({ pageNumber, isNext, path }: Props) {
+const Pagination = ({ pageNumber, isNext, path }: Props) => {
   const router = useRouter();
 
   const handleNavigation = (type: string) => {
@@ -32,24 +32,24 @@ function Pagination({ pageNumber, isNext, path }: Props) {
   if (!isNext && pageNumber === 1) return null;
 
   return (
-    <div className='pagination'>
+    <div className="pagination">
       <Button
         onClick={() => handleNavigation("prev")}
         disabled={pageNumber === 1}
-        className='!text-small-regular text-light-2'
+        className="!text-small-regular text-light-2"
       >
         Prev
       </Button>
-      <p className='text-small-semibold text-light-1'>{pageNumber}</p>
+      <p className="text-small-semibold text-light-1">{pageNumber}</p>
       <Button
         onClick={() => handleNavigation("next")}
         disabled={!isNext}
-        className='!text-small-regular text-light-2'
+        className="!text-small-regular text-light-2"
       >
         Next
       </Button>
     </div>
   );
-}
+};
 
 export default Pagination;

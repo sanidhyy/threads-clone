@@ -7,7 +7,7 @@ import { useAuth } from "@clerk/nextjs";
 
 import { SIDEBAR_LINKS } from "@/constants";
 
-function Bottombar() {
+const Bottombar = () => {
   const pathname = usePathname();
   const { userId } = useAuth();
 
@@ -46,6 +46,6 @@ function Bottombar() {
       </div>
     </section>
   );
-}
+};
 
 export default Bottombar;

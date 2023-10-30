@@ -11,11 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = generateMetadata("Authentication");
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ClerkProvider
       appearance={{
@@ -27,4 +23,6 @@ export default function RootLayout({
       </html>
     </ClerkProvider>
   );
-}
+};
+
+export default RootLayout;
