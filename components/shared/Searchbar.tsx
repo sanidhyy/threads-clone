@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 import { Input } from "../ui/input";
 
-interface Props {
+type SearchBarProps = {
   routeType: string;
-}
+};
 
-const Searchbar = ({ routeType }: Props) => {
+const Searchbar = ({ routeType }: SearchBarProps) => {
   const router = useRouter();
   const [search, setSearch] = useState("");
 

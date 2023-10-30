@@ -5,7 +5,7 @@ import { fetchUserPosts } from "@/lib/actions/user.actions";
 
 import ThreadCard from "../cards/ThreadCard";
 
-interface Result {
+type IResult = {
   name: string;
   image: string;
   id: string;
@@ -30,16 +30,20 @@ interface Result {
       };
     }[];
   }[];
-}
+};
 
-interface Props {
+type ThreadsTabProps = {
   currentUserId: string;
   accountId: string;
   accountType: string;
-}
+};
 
-const ThreadsTab = async ({ currentUserId, accountId, accountType }: Props) => {
-  let result: Result;
+const ThreadsTab = async ({
+  currentUserId,
+  accountId,
+  accountType,
+}: ThreadsTabProps) => {
+  let result: IResult;
 
   if (accountType === "Community") {
     result = await fetchCommunityPosts(accountId);

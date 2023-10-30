@@ -22,14 +22,14 @@ export const fetchUser = async (userId: string) => {
   }
 };
 
-interface Params {
+type updateUserParams = {
   userId: string;
   username: string;
   name: string;
   bio: string;
   image: string;
   path: string;
-}
+};
 
 export const updateUser = async ({
   userId,
@@ -38,7 +38,7 @@ export const updateUser = async ({
   path,
   username,
   image,
-}: Params): Promise<void> => {
+}: updateUserParams): Promise<void> => {
   try {
     connectToDB();
 

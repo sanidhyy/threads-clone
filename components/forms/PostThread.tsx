@@ -20,11 +20,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
 
-interface Props {
+type PostThreadProps = {
   userId: string;
-}
+};
 
-const PostThread = ({ userId }: Props) => {
+const PostThread = ({ userId }: PostThreadProps) => {
   const router = useRouter();
   const pathname = usePathname();
 

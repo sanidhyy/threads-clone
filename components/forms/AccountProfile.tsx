@@ -26,7 +26,7 @@ import { isBase64Image } from "@/lib/utils";
 import { UserValidation } from "@/lib/validations/user";
 import { isUser, updateUser } from "@/lib/actions/user.actions";
 
-interface Props {
+type AccountProfileProps = {
   user: {
     id: string;
     objectId: string;
@@ -36,9 +36,9 @@ interface Props {
     image: string;
   };
   btnTitle: string;
-}
+};
 
-const AccountProfile = ({ user, btnTitle }: Props) => {
+const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
   const router = useRouter();
   const pathname = usePathname();
   const { startUpload } = useUploadThing("media");

@@ -20,13 +20,13 @@ import { Button } from "../ui/button";
 import { CommentValidation } from "@/lib/validations/thread";
 import { addCommentToThread } from "@/lib/actions/thread.actions";
 
-interface Props {
+type CommentProps = {
   threadId: string;
   currentUserImg: string;
   currentUserId: string;
-}
+};
 
-const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
+const Comment = ({ threadId, currentUserImg, currentUserId }: CommentProps) => {
   const pathname = usePathname();
 
   const form = useForm<z.infer<typeof CommentValidation>>({

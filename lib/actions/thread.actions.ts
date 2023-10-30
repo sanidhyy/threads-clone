@@ -48,19 +48,19 @@ export const fetchPosts = async (pageNumber = 1, pageSize = 20) => {
   return { posts, isNext };
 };
 
-interface Params {
+type createThreadParams = {
   text: string;
   author: string;
   communityId: string | null;
   path: string;
-}
+};
 
 export const createThread = async ({
   text,
   author,
   communityId,
   path,
-}: Params) => {
+}: createThreadParams) => {
   try {
     connectToDB();
 

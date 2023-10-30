@@ -5,13 +5,13 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { deleteThread } from "@/lib/actions/thread.actions";
 
-interface Props {
+type DeleteThreadProps = {
   threadId: string;
   currentUserId: string;
   authorId: string;
   parentId: string | null;
   isComment?: boolean;
-}
+};
 
 const DeleteThread = ({
   threadId,
@@ -19,7 +19,7 @@ const DeleteThread = ({
   authorId,
   parentId,
   isComment,
-}: Props) => {
+}: DeleteThreadProps) => {
   const pathname = usePathname();
   const router = useRouter();
 
