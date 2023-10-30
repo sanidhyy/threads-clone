@@ -39,7 +39,7 @@ const RightSidebar = async () => {
             </>
           ) : (
             <p className="!text-base-regular text-light-3">
-              No communities yet
+              No communities yet.
             </p>
           )}
         </div>
@@ -62,7 +62,7 @@ const RightSidebar = async () => {
               ))}
             </>
           ) : (
-            <p className="!text-base-regular text-light-3">No users yet</p>
+            <p className="!text-base-regular text-light-3">No users yet.</p>
           )}
         </div>
       </div>

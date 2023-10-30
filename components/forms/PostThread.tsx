@@ -59,19 +59,23 @@ const PostThread = ({ userId }: Props) => {
           control={form.control}
           name="thread"
           render={({ field }) => (
-            <FormItem className="flex w-full flex-col gap-3">
+            <FormItem className="flex w-full flex-col gap-3" title="Content">
               <FormLabel className="text-base-semibold text-light-2">
                 Content
               </FormLabel>
               <FormControl className="no-focus border border-dark-4 bg-dark-3 text-light-1">
-                <Textarea rows={15} {...field} />
+                <Textarea
+                  rows={15}
+                  placeholder="Type something here..."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" className="bg-primary-500">
+        <Button type="submit" className="bg-primary-500" title="Post Thread">
           Post Thread
         </Button>
       </form>

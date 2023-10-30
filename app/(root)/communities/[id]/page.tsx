@@ -32,7 +32,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <Tabs defaultValue="threads" className="w-full">
           <TabsList className="tab">
             {COMMUNITY_TABS.map((tab) => (
-              <TabsTrigger key={tab.label} value={tab.value} className="tab">
+              <TabsTrigger
+                key={tab.label}
+                value={tab.value}
+                className="tab"
+                title={tab.label}
+              >
                 <Image
                   src={tab.icon}
                   alt={tab.label}

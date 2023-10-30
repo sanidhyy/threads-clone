@@ -28,7 +28,12 @@ const Searchbar = ({ routeType }: Props) => {
   }, [search, routeType, router]);
 
   return (
-    <div className="searchbar">
+    <div
+      className="searchbar"
+      title={`${
+        routeType !== "/search" ? "Search communities" : "Search creators"
+      }`}
+    >
       <Image
         src="/assets/search-gray.svg"
         alt="search"
