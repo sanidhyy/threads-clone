@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { formatDateString } from "@/lib/utils";
 import DeleteThread from "../forms/DeleteThread";
+
+import { formatDateString } from "@/lib/utils";
 
 type ThreadCardProps = {
   id: string;
