@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Button } from "../ui/button";
 
+// Define the props for the CommunityCard component
 type CommunityCardProps = {
   id: string;
   name: string;
@@ -14,6 +15,7 @@ type CommunityCardProps = {
   }[];
 };
 
+// Create the CommunityCard component
 const CommunityCard = ({
   id,
   name,
@@ -25,6 +27,7 @@ const CommunityCard = ({
   return (
     <article className="community-card">
       <div className="flex flex-wrap items-center gap-3">
+        {/* Link to the community page */}
         <Link href={`/communities/${id}`} className="relative h-12 w-12">
           <Image
             src={imgUrl}
@@ -36,6 +39,7 @@ const CommunityCard = ({
         </Link>
 
         <div>
+          {/* Link to the community page and display the community name */}
           <Link href={`/communities/${id}`}>
             <h4 className="text-base-semibold text-light-1">{name}</h4>
           </Link>
@@ -46,6 +50,7 @@ const CommunityCard = ({
       <p className="mt-4 text-subtle-medium text-gray-1">{bio}</p>
 
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+        {/* Link to the community page with a "View" button */}
         <Link href={`/communities/${id}`} title="View Community">
           <Button size="sm" className="community-card_btn">
             View

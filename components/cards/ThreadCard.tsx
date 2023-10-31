@@ -1,15 +1,15 @@
+// Import necessary libraries and components
 import Image from "next/image";
 import Link from "next/link";
-
 import DeleteThread from "../forms/DeleteThread";
-
 import { formatDateString } from "@/lib/utils";
 
+// Define the props that the ThreadCard component accepts
 type ThreadCardProps = {
-  id: string;
-  currentUserId: string;
-  parentId: string | null;
-  content: string;
+  id: string; // Unique identifier for the thread
+  currentUserId: string; // ID of the current user
+  parentId: string | null; // ID of the parent thread (if it's a comment)
+  content: string; // The content or text of the thread
   author: {
     name: string;
     image: string;
@@ -20,13 +20,13 @@ type ThreadCardProps = {
     name: string;
     image: string;
   } | null;
-  createdAt: string;
+  createdAt: string; // Timestamp when the thread was created
   comments: {
     author: {
       image: string;
     };
   }[];
-  isComment?: boolean;
+  isComment?: boolean; // Boolean indicating whether the thread is a comment
 };
 
 const ThreadCard = ({
@@ -81,6 +81,7 @@ const ThreadCard = ({
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className="flex gap-3.5">
+                {/* Icons for actions such as like, reply, repost, and share */}
                 <Image
                   src="/assets/heart-gray.svg"
                   alt="heart"
@@ -127,6 +128,7 @@ const ThreadCard = ({
           </div>
         </div>
 
+        {/* Component to delete the thread */}
         <DeleteThread
           threadId={JSON.stringify(id)}
           currentUserId={currentUserId}
@@ -136,6 +138,7 @@ const ThreadCard = ({
         />
       </div>
 
+      {/* Display comments if there are any */}
       {!isComment && comments.length > 0 && (
         <div className="ml-1 mt-3 flex items-center gap-2">
           {comments.slice(0, 2).map((comment, index) => (
@@ -157,6 +160,7 @@ const ThreadCard = ({
         </div>
       )}
 
+      {/* Display information about the community and timestamp */}
       {!isComment && community && (
         <Link
           href={`/communities/${community.id}`}
