@@ -5,13 +5,19 @@ import AccountProfile from "@/components/forms/AccountProfile";
 
 import { fetchUser } from "@/lib/actions/user.actions";
 
+// Define an asynchronous function named Page
 export const Page = async () => {
+  // Get the current user
   const user = await currentUser();
-  if (!user) return null; // to avoid typescript warnings
+  if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
+  // Fetch user information based on the user's ID
   const userInfo = await fetchUser(user.id);
+
+  // Redirect if the user has already onboarded
   if (userInfo?.onboarded) redirect("/");
 
+  // Create a user data object
   const userData = {
     id: user.id,
     objectId: userInfo?._id,
@@ -21,6 +27,7 @@ export const Page = async () => {
     image: userInfo ? userInfo?.image : user.imageUrl,
   };
 
+  // Render the page content
   return (
     <main className="mx-auto flex max-w-3xl flex-col justify-start px-10 py-20">
       <h1 className="head-text">Onboarding</h1>
@@ -29,6 +36,7 @@ export const Page = async () => {
       </p>
 
       <section className="mt-9 bg-dark-2 p-10">
+        {/* Render the AccountProfile component with user data and a button title */}
         <AccountProfile user={userData} btnTitle="Continue" />
       </section>
     </main>

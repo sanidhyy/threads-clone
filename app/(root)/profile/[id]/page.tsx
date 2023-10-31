@@ -2,24 +2,29 @@ import Image from "next/image";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-import { PROFILE_TABS } from "@/constants";
-
 import ThreadsTab from "@/components/shared/ThreadsTab";
 import ProfileHeader from "@/components/shared/ProfileHeader";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { fetchUser } from "@/lib/actions/user.actions";
+import { PROFILE_TABS } from "@/constants";
 
+// Define an asynchronous function named Page that takes parameters as input
 const Page = async ({ params }: { params: { id: string } }) => {
+  // Get the current user
   const user = await currentUser();
-  if (!user) return null;
+  if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
+  // Fetch user information based on the provided user ID
   const userInfo = await fetchUser(params.id);
+
+  // Redirect to the onboarding page if the user hasn't completed onboarding
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   return (
     <section>
+      {/* Render the ProfileHeader component with user information */}
       <ProfileHeader
         accountId={userInfo.id}
         authUserId={user.id}
@@ -30,6 +35,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
       />
 
       <div className="mt-9">
+        {/* Render a tabbed interface using the Tabs component */}
         <Tabs defaultValue="threads" className="w-full">
           <TabsList className="tab">
             {PROFILE_TABS.map((tab) => (
@@ -39,6 +45,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
                 className="tab"
                 title={tab.label}
               >
+                {/* Render tab icon */}
                 <Image
                   src={tab.icon}
                   alt={tab.label}
@@ -48,6 +55,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
                 />
                 <p className="max-sm:hidden">{tab.label}</p>
 
+                {/* Display thread count for the "Threads" tab */}
                 {tab.label === "Threads" && (
                   <p className="ml-1 rounded-sm bg-light-4 px-2 py-1 !text-tiny-medium text-light-2">
                     {userInfo.threads.length}
@@ -56,6 +64,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
               </TabsTrigger>
             ))}
           </TabsList>
+          {/* Render TabsContent for each tab */}
           {PROFILE_TABS.map((tab) => (
             <TabsContent
               key={`content-${tab.label}`}
@@ -75,4 +84,5 @@ const Page = async ({ params }: { params: { id: string } }) => {
     </section>
   );
 };
+
 export default Page;

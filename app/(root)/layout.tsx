@@ -13,10 +13,13 @@ import { generateMetadata } from "@/lib/utils";
 
 import "../globals.css";
 
+// Create an instance of the Inter font with the "latin" subset
 const inter = Inter({ subsets: ["latin"] });
 
+// Define metadata for the page
 export const metadata: Metadata = generateMetadata();
 
+// Define the root layout component that wraps the entire application
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ClerkProvider
@@ -26,18 +29,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     >
       <html lang="en">
         <body className={inter.className}>
-          <Topbar />
-
+          <Topbar /> {/* Render the top navigation bar */}
           <main className="flex flex-row">
-            <LeftSidebar />
+            <LeftSidebar /> {/* Render the left sidebar */}
             <section className="main-container">
               <div className="w-full max-w-4xl">{children}</div>
             </section>
             {/* @ts-ignore */}
-            <RightSidebar />
+            <RightSidebar /> {/* Render the right sidebar */}
           </main>
-
-          <Bottombar />
+          <Bottombar /> {/* Render the bottom navigation bar */}
         </body>
       </html>
     </ClerkProvider>

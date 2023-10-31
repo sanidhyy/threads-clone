@@ -8,17 +8,23 @@ import Pagination from "@/components/shared/Pagination";
 import { fetchPosts } from "@/lib/actions/thread.actions";
 import { fetchUser } from "@/lib/actions/user.actions";
 
+// Define an asynchronous function named Home that takes search parameters as input
 const Home = async ({
   searchParams,
 }: {
   searchParams: { [key: string]: string | undefined };
 }) => {
+  // Get the current user
   const user = await currentUser();
-  if (!user) return null;
+  if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
+  // Fetch user information based on the user's ID
   const userInfo = await fetchUser(user.id);
+
+  // Redirect to the onboarding page if the user hasn't completed onboarding
   if (!userInfo?.onboarded) redirect("/onboarding");
 
+  // Fetch a list of posts (threads) based on search parameters
   const result = await fetchPosts(
     searchParams.page ? +searchParams.page : 1,
     30
@@ -34,6 +40,7 @@ const Home = async ({
         ) : (
           <>
             {result.posts.map((post) => (
+              // Render ThreadCard component for each post (thread)
               <ThreadCard
                 key={post._id}
                 id={post._id}

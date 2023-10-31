@@ -8,17 +8,23 @@ import CommunityCard from "@/components/cards/CommunityCard";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { fetchCommunities } from "@/lib/actions/community.actions";
 
+// Define an asynchronous function named Page that takes search parameters as input
 const Page = async ({
   searchParams,
 }: {
   searchParams: { [key: string]: string | undefined };
 }) => {
+  // Get the current user
   const user = await currentUser();
-  if (!user) return null;
+  if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
+  // Fetch user information based on the user's ID
   const userInfo = await fetchUser(user.id);
+
+  // Redirect to the onboarding page if the user hasn't completed onboarding
   if (!userInfo?.onboarded) redirect("/onboarding");
 
+  // Fetch a list of communities based on search parameters
   const result = await fetchCommunities({
     searchString: searchParams.q,
     pageNumber: searchParams?.page ? +searchParams.page : 1,
