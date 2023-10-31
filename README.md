@@ -4,14 +4,14 @@
 
 ![A Next.js 13 Meta Threads application.](/.github/images/img_main.png "A Next.js 13 Meta Threads application.")
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/threads-clone?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/threads-clone?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/threads-clone?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/commits "Github commits")
+[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
+[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/threads-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/blob/main/LICENSE "GitHub license")
+[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/commits/main "Maintenance")
+[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/threads-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/branches "GitHub branches")
+[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/threads-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/commits "Github commits")
 [![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://threaad.vercel.app/ "Vercel status")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/threads-clone?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/threads-clone?icon=github&color=black&scale=1.1)](https://github.com/sanidhyy/threads-clone/pulls "GitHub pull requests")
+[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/threads-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/issues "GitHub issues")
+[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/threads-clone?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/threads-clone/pulls "GitHub pull requests")
 
 <!-- Table of Contents -->
 <details>
