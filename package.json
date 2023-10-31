@@ -105,5 +105,8 @@
       "type": "Buy me a coffee",
       "url": "https://www.buymeacoffee.com/sanidhy"
     }
-  ]
+  ],
+  "devDependencies": {
+    "encoding": "^0.1.13"
+  }
 }
