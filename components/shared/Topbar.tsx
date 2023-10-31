@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
-import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
+import Image from "next/image"; // Import the `Image` component from Next.js.
+import Link from "next/link"; // Import the `Link` component from Next.js.
+import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs"; // Import components from Clerk for authentication.
+import { dark } from "@clerk/themes"; // Import a dark theme from Clerk.
 
-import { EXTRA_LINKS, SITE_NAME } from "@/constants";
+import { EXTRA_LINKS, SITE_NAME } from "@/constants"; // Import constants from a local module.
 
 const Topbar = () => {
   return (
@@ -63,4 +63,4 @@ const Topbar = () => {
   );
 };
 
-export default Topbar;
+export default Topbar; // Export the `Topbar` component as the default export.

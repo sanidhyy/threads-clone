@@ -1,20 +1,21 @@
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs"; // Import the `currentUser` function from the Clerk package.
+import UserCard from "../cards/UserCard"; // Import the `UserCard` component.
 
-import UserCard from "../cards/UserCard";
-
-import { fetchCommunities } from "@/lib/actions/community.actions";
-import { fetchUsers } from "@/lib/actions/user.actions";
+import { fetchCommunities } from "@/lib/actions/community.actions"; // Import the `fetchCommunities` function.
+import { fetchUsers } from "@/lib/actions/user.actions"; // Import the `fetchUsers` function.
 
 const RightSidebar = async () => {
-  const user = await currentUser();
-  if (!user) return null;
+  const user = await currentUser(); // Get the current user asynchronously.
+  if (!user) return null; // If there's no user, return null.
 
+  // Fetch users similar to the current user.
   const similarMinds = await fetchUsers({
     userId: user.id,
     pageSize: 4,
   });
 
-  const suggestedCOmmunities = await fetchCommunities({ pageSize: 4 });
+  // Fetch suggested communities.
+  const suggestedCommunities = await fetchCommunities({ pageSize: 4 });
 
   return (
     <aside className="custom-scrollbar rightsidebar">
@@ -24,9 +25,9 @@ const RightSidebar = async () => {
         </h3>
 
         <div className="mt-7 flex w-[350px] flex-col gap-9">
-          {suggestedCOmmunities.communities.length > 0 ? (
+          {suggestedCommunities.communities.length > 0 ? (
             <>
-              {suggestedCOmmunities.communities.map((community) => (
+              {suggestedCommunities.communities.map((community) => (
                 <UserCard
                   key={community.id}
                   id={community.id}

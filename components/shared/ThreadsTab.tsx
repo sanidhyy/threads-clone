@@ -1,11 +1,12 @@
-import { redirect } from "next/navigation";
+import { redirect } from "next/navigation"; // Import the `redirect` function from Next.js.
 
-import { fetchCommunityPosts } from "@/lib/actions/community.actions";
-import { fetchUserPosts } from "@/lib/actions/user.actions";
+import { fetchCommunityPosts } from "@/lib/actions/community.actions"; // Import the `fetchCommunityPosts` function.
+import { fetchUserPosts } from "@/lib/actions/user.actions"; // Import the `fetchUserPosts` function.
 
-import ThreadCard from "../cards/ThreadCard";
+import ThreadCard from "../cards/ThreadCard"; // Import the `ThreadCard` component.
 
 type IResult = {
+  // Define the `IResult` type, which describes the structure of the result data.
   name: string;
   image: string;
   id: string;
@@ -43,16 +44,16 @@ const ThreadsTab = async ({
   accountId,
   accountType,
 }: ThreadsTabProps) => {
-  let result: IResult;
+  let result: IResult; // Declare a variable `result` with the type `IResult`.
 
   if (accountType === "Community") {
-    result = await fetchCommunityPosts(accountId);
+    result = await fetchCommunityPosts(accountId); // Fetch community posts if the `accountType` is "Community".
   } else {
-    result = await fetchUserPosts(accountId);
+    result = await fetchUserPosts(accountId); // Fetch user posts if the `accountType` is not "Community".
   }
 
   if (!result) {
-    redirect("/");
+    redirect("/"); // Redirect to the home page if `result` is falsy.
   }
 
   return (
@@ -86,4 +87,4 @@ const ThreadsTab = async ({
   );
 };
 
-export default ThreadsTab;
+export default ThreadsTab; // Export the `ThreadsTab` component as the default export.
