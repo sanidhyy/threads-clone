@@ -6,7 +6,7 @@ import AccountProfile from "@/components/forms/AccountProfile";
 import { fetchUser } from "@/lib/actions/user.actions";
 
 // Define an asynchronous function named Page
-export const Page = async () => {
+const Page = async () => {
   // Get the current user
   const user = await currentUser();
   if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
