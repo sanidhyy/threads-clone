@@ -1,7 +1,9 @@
 // Import necessary libraries and components
 import Image from "next/image";
 import Link from "next/link";
+
 import DeleteThread from "../forms/DeleteThread";
+
 import { formatDateString } from "@/lib/utils";
 
 // Define the props that the ThreadCard component accepts

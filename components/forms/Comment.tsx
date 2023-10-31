@@ -1,5 +1,6 @@
 "use client";
 
+// Import necessary libraries and components
 import { z } from "zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -14,6 +15,7 @@ import { Button } from "../ui/button";
 import { CommentValidation } from "@/lib/validations/thread";
 import { addCommentToThread } from "@/lib/actions/thread.actions";
 
+// Define the props that the Comment component accepts
 type CommentProps = {
   threadId: string;
   currentUserImg: string;
@@ -23,6 +25,7 @@ type CommentProps = {
 const Comment = ({ threadId, currentUserImg, currentUserId }: CommentProps) => {
   const pathname = usePathname();
 
+  // Initialize the form using react-hook-form and zodResolver
   const form = useForm<z.infer<typeof CommentValidation>>({
     resolver: zodResolver(CommentValidation),
     defaultValues: {
@@ -30,7 +33,9 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: CommentProps) => {
     },
   });
 
+  // Function to handle form submission
   const onSubmit = async (values: z.infer<typeof CommentValidation>) => {
+    // Call the function to add a comment to the thread
     await addCommentToThread(
       threadId,
       values.thread,
@@ -38,6 +43,7 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: CommentProps) => {
       pathname
     );
 
+    // Reset the form after submission
     form.reset();
   };
 
@@ -50,6 +56,7 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: CommentProps) => {
           render={({ field }) => (
             <FormItem className="flex w-full items-center gap-3">
               <FormLabel>
+                {/* Display the current user's image */}
                 <Image
                   src={currentUserImg}
                   alt="current_user"

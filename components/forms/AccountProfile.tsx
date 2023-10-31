@@ -1,5 +1,6 @@
 "use client";
 
+// Import necessary libraries and components
 import * as z from "zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -27,6 +28,7 @@ import { isBase64Image } from "@/lib/utils";
 import { UserValidation } from "@/lib/validations/user";
 import { isUser, updateUser } from "@/lib/actions/user.actions";
 
+// Define the props that the AccountProfile component accepts
 type AccountProfileProps = {
   user: {
     id: string;
@@ -47,6 +49,7 @@ const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
 
   const [files, setFiles] = useState<File[]>([]);
 
+  // Initialize the form using react-hook-form and zodResolver
   const form = useForm<z.infer<typeof UserValidation>>({
     resolver: zodResolver(UserValidation),
     defaultValues: {
@@ -57,6 +60,7 @@ const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
     },
   });
 
+  // Function to handle form submission
   const onSubmit = async (values: z.infer<typeof UserValidation>) => {
     const blob = values.profile_photo;
 
@@ -92,6 +96,7 @@ const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
     }
   };
 
+  // Function to handle image selection
   const handleImage = (
     e: ChangeEvent<HTMLInputElement>,
     fieldChange: (value: string) => void

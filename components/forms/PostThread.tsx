@@ -1,5 +1,6 @@
 "use client";
 
+// Import necessary libraries and components
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { useOrganization } from "@clerk/nextjs";
@@ -20,16 +21,20 @@ import { Textarea } from "../ui/textarea";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
 
+// Define the props that the PostThread component accepts
 type PostThreadProps = {
   userId: string;
 };
 
 const PostThread = ({ userId }: PostThreadProps) => {
+  // Get the router and current pathname from Next.js
   const router = useRouter();
   const pathname = usePathname();
 
+  // Get the organization data using Clerk
   const { organization } = useOrganization();
 
+  // Create a form using react-hook-form and zodResolver
   const form = useForm<z.infer<typeof ThreadValidation>>({
     resolver: zodResolver(ThreadValidation),
     defaultValues: {
@@ -38,7 +43,9 @@ const PostThread = ({ userId }: PostThreadProps) => {
     },
   });
 
+  // Handle form submission
   const onSubmit = async (values: z.infer<typeof ThreadValidation>) => {
+    // Call createThread function to post a new thread
     await createThread({
       text: values.thread,
       author: userId,
@@ -46,6 +53,7 @@ const PostThread = ({ userId }: PostThreadProps) => {
       path: pathname,
     });
 
+    // Redirect to the homepage
     router.push("/");
   };
 
