@@ -12,8 +12,10 @@ import { fetchThreadById } from "@/lib/actions/thread.actions";
 export const revalidate = 0;
 
 // Define an asynchronous function named page that takes parameters as input
-const page = async ({ params }: { params: { id: string } }) => {
-  if (!params.id) return null; // Return null if there's no thread ID
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+
+  if (!id) return null; // Return null if there's no thread ID
 
   // Get the current user
   const user = await currentUser();
@@ -26,7 +28,7 @@ const page = async ({ params }: { params: { id: string } }) => {
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   // Fetch thread information based on the provided thread ID
-  const thread = await fetchThreadById(params.id);
+  const thread = await fetchThreadById(id);
 
   return (
     <section className="relative">
@@ -47,7 +49,7 @@ const page = async ({ params }: { params: { id: string } }) => {
       <div className="mt-7">
         {/* Render the Comment component to allow users to add comments */}
         <Comment
-          threadId={params.id}
+          threadId={id}
           currentUserImg={user.imageUrl}
           currentUserId={JSON.stringify(userInfo._id)}
         />

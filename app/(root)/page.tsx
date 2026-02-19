@@ -12,8 +12,10 @@ import { fetchUser } from "@/lib/actions/user.actions";
 const Home = async ({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | undefined };
+  searchParams: Promise<{ page: string | undefined }>;
 }) => {
+  const { page } = await searchParams;
+
   // Get the current user
   const user = await currentUser();
   if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
@@ -25,10 +27,7 @@ const Home = async ({
   if (!userInfo?.onboarded) redirect("/onboarding");
 
   // Fetch a list of posts (threads) based on search parameters
-  const result = await fetchPosts(
-    searchParams.page ? +searchParams.page : 1,
-    30
-  );
+  const result = await fetchPosts(page ? +page : 1, 30);
 
   return (
     <>
@@ -59,7 +58,7 @@ const Home = async ({
 
       <Pagination
         path="/"
-        pageNumber={searchParams?.page ? +searchParams.page : 1}
+        pageNumber={page ? +page : 1}
         isNext={result.isNext}
       />
     </>

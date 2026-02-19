@@ -12,13 +12,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { fetchCommunityDetails } from "@/lib/actions/community.actions";
 
 // Define an asynchronous function named Page that takes parameters as input
-const Page = async ({ params }: { params: { id: string } }) => {
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+
   // Get the current user
   const user = await currentUser();
   if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
   // Fetch community details based on the provided ID
-  const communityDetails = await fetchCommunityDetails(params.id);
+  const communityDetails = await fetchCommunityDetails(id);
 
   return (
     <section>

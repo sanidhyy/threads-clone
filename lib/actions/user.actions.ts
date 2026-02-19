@@ -11,7 +11,7 @@ import { connectToDB } from "../mongoose";
 
 export const fetchUser = async (userId: string) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     return await User.findOne({ id: userId }).populate({
       path: "communities",
@@ -40,7 +40,7 @@ export const updateUser = async ({
   image,
 }: updateUserParams): Promise<void> => {
   try {
-    connectToDB();
+    await connectToDB();
 
     await User.findOneAndUpdate(
       { id: userId },
@@ -64,7 +64,7 @@ export const updateUser = async ({
 
 export const fetchUserPosts = async (userId: string) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     // Find all threads authored by the user with the given userId
     const threads = await User.findOne({ id: userId }).populate({
@@ -97,7 +97,7 @@ export const fetchUserPosts = async (userId: string) => {
 // check if user exists (by username)
 export const isUser = async ({ username }: { username: string }) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     const userQuery = await User.findOne({
       username,
@@ -129,7 +129,7 @@ export const fetchUsers = async ({
   sortBy?: SortOrder;
 }) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     // Calculate the number of users to skip based on the page number and page size.
     const skipAmount = (pageNumber - 1) * pageSize;
@@ -175,7 +175,7 @@ export const fetchUsers = async ({
 
 export const getActivity = async (userId: string) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     // Find all threads created by the user
     const userThreads = await Thread.find({ author: userId });

@@ -12,8 +12,10 @@ import { fetchCommunities } from "@/lib/actions/community.actions";
 const Page = async ({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | undefined };
+  searchParams: Promise<{ page: string | undefined; q: string | undefined }>;
 }) => {
+  const { page, q } = await searchParams;
+
   // Get the current user
   const user = await currentUser();
   if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
@@ -26,8 +28,8 @@ const Page = async ({
 
   // Fetch a list of communities based on search parameters
   const result = await fetchCommunities({
-    searchString: searchParams.q,
-    pageNumber: searchParams?.page ? +searchParams.page : 1,
+    searchString: q,
+    pageNumber: page ? +page : 1,
     pageSize: 25,
   });
 
@@ -61,7 +63,7 @@ const Page = async ({
 
       <Pagination
         path="communities"
-        pageNumber={searchParams?.page ? +searchParams.page : 1}
+        pageNumber={page ? +page : 1}
         isNext={result.isNext}
       />
     </>

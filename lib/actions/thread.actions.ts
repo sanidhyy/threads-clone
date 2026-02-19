@@ -9,7 +9,7 @@ import Thread from "../models/thread.model";
 import Community from "../models/community.model";
 
 export const fetchPosts = async (pageNumber = 1, pageSize = 20) => {
-  connectToDB();
+  await connectToDB();
 
   // Calculate the number of posts to skip based on the page number and page size.
   const skipAmount = (pageNumber - 1) * pageSize;
@@ -62,7 +62,7 @@ export const createThread = async ({
   path,
 }: createThreadParams) => {
   try {
-    connectToDB();
+    await connectToDB();
 
     const communityIdObject = await Community.findOne(
       { id: communityId },
@@ -107,7 +107,7 @@ const fetchAllChildThreads = async (threadId: string): Promise<any[]> => {
 
 export const deleteThread = async (id: string, path: string): Promise<void> => {
   try {
-    connectToDB();
+    await connectToDB();
 
     // Find the thread to be deleted (the main thread)
     const mainThread = await Thread.findById(id).populate("author community");
@@ -162,7 +162,7 @@ export const deleteThread = async (id: string, path: string): Promise<void> => {
 };
 
 export const fetchThreadById = async (threadId: string) => {
-  connectToDB();
+  await connectToDB();
 
   try {
     const thread = await Thread.findById(threadId)
@@ -210,7 +210,7 @@ export const addCommentToThread = async (
   userId: string,
   path: string
 ) => {
-  connectToDB();
+  await connectToDB();
 
   try {
     // Find the original thread by its ID
