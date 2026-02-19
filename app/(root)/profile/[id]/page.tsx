@@ -11,13 +11,15 @@ import { fetchUser } from "@/lib/actions/user.actions";
 import { PROFILE_TABS } from "@/constants";
 
 // Define an asynchronous function named Page that takes parameters as input
-const Page = async ({ params }: { params: { id: string } }) => {
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+
   // Get the current user
   const user = await currentUser();
   if (!user) return null; // Return null if there's no user to avoid TypeScript warnings
 
   // Fetch user information based on the provided user ID
-  const userInfo = await fetchUser(params.id);
+  const userInfo = await fetchUser(id);
 
   // Redirect to the onboarding page if the user hasn't completed onboarding
   if (!userInfo?.onboarded) redirect("/onboarding");

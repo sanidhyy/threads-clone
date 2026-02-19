@@ -71,6 +71,5 @@ export const SITE_DATA: Metadata = {
   keywords: [
     // List of keywords related to your website.
   ],
-  themeColor: "#877EFF",
   manifest: "/manifest.json",
 };
