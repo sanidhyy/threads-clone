@@ -43,6 +43,8 @@
 
 Here is the folder structure of Threads Clone.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 threads-clone/
   |- public/
@@ -93,6 +95,8 @@ threads-clone/
   |- tsconfig.json
 ```
 
+<!--- FOLDER_STRUCTURE_END --->
+
 <br />
 
 ## :toolbox: Getting Started
@@ -130,7 +134,6 @@ UPLOADTHING_APP_ID=XXXXXXXX
 ![Copy Clerk Webhook Key](/.github/images/step_clerk_webhook.png "Copy Clerk Webhook Key")
 
 7. **URLs for Clerk**:
-
    - `NEXT_PUBLIC_CLERK_SIGN_IN_URL`, `NEXT_PUBLIC_CLERK_SIGN_UP_URL`, `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL`, and `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL` are endpoints or URLs related to your Clerk setup. You can configure these in your Clerk dashboard.
 
 8. **MongoDB URL**:
@@ -177,6 +180,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and libraries that are used in My Portfolio
 
+<!--- DEPENDENCIES_START --->
+
 - [Clerk](https://clerk.com/ "Clerk")
 - [ShadCN UI](https://shadcn.com/ "ShadCN UI")
 - [CLSX](https://www.npmjs.com/package/clsx "CLSX")
@@ -189,6 +194,7 @@ Useful resources and libraries that are used in My Portfolio
 - [Prettier](https://prettier.io "Prettier")
 - [ESLint](https://eslint.org "ESLint")
 - [Next PWA](https://www.npmjs.com/package/next-pwa "Next PWA")
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
