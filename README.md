@@ -44,26 +44,13 @@
 Here is the folder structure of Threads Clone.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 threads-clone/
-  |- public/
   |- app/
     |-- (auth)/
-        |--- onboarding/
-        |--- sign-in/
-        |--- sign-up/
-        |--- layout.tsx
     |-- (root)/
-        |--- activity/
-        |--- communities/
-        |--- create-thread/
-        |--- profile/
-        |--- search/
-        |--- thread/
-        |--- layout.tsx
-        |--- page.tsx
     |-- api/
+    |-- apple-icon.png
     |-- favicon.ico
     |-- globals.css
   |- components/
@@ -81,20 +68,21 @@ threads-clone/
     |-- uploadthing.ts
     |-- utils.ts
   |- public/
-    |-- assets/
-    |-- icons/
-  |- .env.local/
-  |- .env.example/
+  |- .env.example
+  |- .env/.env.local
+  |- .eslintrc.json
+  |- .gitignore
+  |- .gitpod.yml
+  |- bun.lock
   |- components.json
   |- middleware.ts
-  |- next.config.js/
-  |- package-lock.json
+  |- next.config.js
   |- package.json
   |- postcss.config.js
   |- tailwind.config.js
   |- tsconfig.json
+  |- vercel.ts
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
@@ -181,19 +169,47 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and libraries that are used in My Portfolio
 
 <!--- DEPENDENCIES_START --->
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.8
+- [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.20
+- [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
+- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.8
+- [@radix-ui/react-menubar](https://www.npmjs.com/package/@radix-ui/react-menubar): ^1.1.16
+- [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [@radix-ui/react-tabs](https://www.npmjs.com/package/@radix-ui/react-tabs): ^1.1.13
+- [@radix-ui/react-toast](https://www.npmjs.com/package/@radix-ui/react-toast): ^1.2.15
+- [@types/node](https://www.npmjs.com/package/@types/node): 25.3.0
+- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [@uploadthing/react](https://www.npmjs.com/package/@uploadthing/react): ^5.7.0
+- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.0.33
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): 10.4.24
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
+- [encoding](https://www.npmjs.com/package/encoding): ^0.1.13
+- [eslint](https://www.npmjs.com/package/eslint): 8.45.0
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 13.4.10
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^8.8.0
+- [eslint-config-standard](https://www.npmjs.com/package/eslint-config-standard): ^17.1.0
+- [eslint-plugin-tailwindcss](https://www.npmjs.com/package/eslint-plugin-tailwindcss): ^3.13.0
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
+- [micro](https://www.npmjs.com/package/micro): ^10.0.1
+- [mongoose](https://www.npmjs.com/package/mongoose): ^8.9.5
+- [next](https://www.npmjs.com/package/next): 15.5.10
+- [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
+- [postcss](https://www.npmjs.com/package/postcss): 8.4.26
+- [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
+- [react](https://www.npmjs.com/package/react): 19.2.4
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.71.1
+- [svix](https://www.npmjs.com/package/svix): ^1.85.0
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^1.13.2
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): 3.3.3
+- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [typescript](https://www.npmjs.com/package/typescript): 5.9.3
+- [uploadthing](https://www.npmjs.com/package/uploadthing): ^5.2.0
+- [zod](https://www.npmjs.com/package/zod): ^4.3.6
 
-- [Clerk](https://clerk.com/ "Clerk")
-- [ShadCN UI](https://shadcn.com/ "ShadCN UI")
-- [CLSX](https://www.npmjs.com/package/clsx "CLSX")
-- [Uploadthing](https://uploadthing.com/ "Uploadthing")
-- [ZOD](https://zod.dev "ZOD")
-- [React Hook Form](https://www.react-hook-form.com "React Hook Form")
-- [Class Variance Authority](https://www.npmjs.com/package/class-variance-authority "Class Variance Authority")
-- [React Hot Toast](https://www.npmjs.com/package/react-hot-toast "React Hot Toast")
-- [Lucide Icon](https://lucide.dev "Lucide Icon")
-- [Prettier](https://prettier.io "Prettier")
-- [ESLint](https://eslint.org "ESLint")
-- [Next PWA](https://www.npmjs.com/package/next-pwa "Next PWA")
 <!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
