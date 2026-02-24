@@ -72,7 +72,6 @@ threads-clone/
   |- .env/.env.local
   |- .eslintrc.json
   |- .gitignore
-  |- .gitpod.yml
   |- bun.lock
   |- components.json
   |- middleware.ts
