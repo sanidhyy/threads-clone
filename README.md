@@ -158,7 +158,7 @@ UPLOADTHING_APP_ID=XXXXXXXX
 
 ## :wrench: Stats
 
-[![Stats for this App](/.github/images/stats.svg "Stats for this App")](https://pagespeed-insights-svg.glitch.me/?url=https://threaad.vercel.app/ "Stats for this App")
+[![Stats for this App](/.github/images/stats.svg "Stats for this App")](https://pagespeed.web.dev/analysis?url=https://threaad.vercel.app/ "Stats for this App")
 
 ## :raised_hands: Contribute
 
