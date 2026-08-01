@@ -196,7 +196,7 @@ Useful resources and libraries that are used in My Portfolio
 - [mongoose](https://www.npmjs.com/package/mongoose): ^8.9.5
 - [next](https://www.npmjs.com/package/next): 15.5.18
 - [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
-- [postcss](https://www.npmjs.com/package/postcss): 8.4.26
+- [postcss](https://www.npmjs.com/package/postcss): 8.5.18
 - [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
 - [react](https://www.npmjs.com/package/react): 19.2.4
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
