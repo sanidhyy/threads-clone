@@ -194,7 +194,7 @@ Useful resources and libraries that are used in My Portfolio
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
 - [micro](https://www.npmjs.com/package/micro): ^10.0.1
 - [mongoose](https://www.npmjs.com/package/mongoose): ^8.9.5
-- [next](https://www.npmjs.com/package/next): 15.5.18
+- [next](https://www.npmjs.com/package/next): 15.5.21
 - [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
 - [postcss](https://www.npmjs.com/package/postcss): 8.5.18
 - [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
