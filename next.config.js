@@ -11,6 +11,7 @@ const withPWA = require("next-pwa")({
 const nextConfig = {
   serverExternalPackages: ["mongoose"],
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
