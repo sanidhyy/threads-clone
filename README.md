@@ -179,7 +179,7 @@ Useful resources and libraries that are used in My Portfolio
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.8
 - [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.20
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
-- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.8
+- [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.17
 - [@radix-ui/react-menubar](https://www.npmjs.com/package/@radix-ui/react-menubar): ^1.1.16
 - [@radix-ui/react-select](https://www.npmjs.com/package/@radix-ui/react-select): ^2.2.6
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
@@ -202,9 +202,9 @@ Useful resources and libraries that are used in My Portfolio
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
 - [micro](https://www.npmjs.com/package/micro): ^10.0.1
 - [mongoose](https://www.npmjs.com/package/mongoose): ^9.12.1
-- [next](https://www.npmjs.com/package/next): 15.5.24
+- [next](https://www.npmjs.com/package/next): 16.4.6
 - [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
-- [postcss](https://www.npmjs.com/package/postcss): 8.5.18
+- [postcss](https://www.npmjs.com/package/postcss): 8.5.33
 - [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
 - [react](https://www.npmjs.com/package/react): 19.2.4
 - [react-dom](https://www.npmjs.com/package/react-dom): 19.2.4
