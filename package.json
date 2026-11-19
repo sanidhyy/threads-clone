@@ -12,7 +12,7 @@
     "@clerk/nextjs": "^4.31.8",
     "@clerk/themes": "^1.7.20",
     "@hookform/resolvers": "^3.10.0",
-    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-label": "^2.1.17",
     "@radix-ui/react-menubar": "^1.1.16",
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "^1.2.4",
