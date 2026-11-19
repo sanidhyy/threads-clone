@@ -201,7 +201,7 @@ Useful resources and libraries that are used in My Portfolio
 - [eslint-plugin-tailwindcss](https://www.npmjs.com/package/eslint-plugin-tailwindcss): ^3.13.0
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
 - [micro](https://www.npmjs.com/package/micro): ^10.0.1
-- [mongoose](https://www.npmjs.com/package/mongoose): ^8.9.5
+- [mongoose](https://www.npmjs.com/package/mongoose): ^9.12.1
 - [next](https://www.npmjs.com/package/next): 15.5.24
 - [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
 - [postcss](https://www.npmjs.com/package/postcss): 8.5.18
