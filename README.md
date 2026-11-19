@@ -195,7 +195,7 @@ Useful resources and libraries that are used in My Portfolio
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [encoding](https://www.npmjs.com/package/encoding): ^0.1.13
 - [eslint](https://www.npmjs.com/package/eslint): 8.45.0
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 13.4.10
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.4.6
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^8.8.0
 - [eslint-config-standard](https://www.npmjs.com/package/eslint-config-standard): ^17.1.0
 - [eslint-plugin-tailwindcss](https://www.npmjs.com/package/eslint-plugin-tailwindcss): ^3.13.0
