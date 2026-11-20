@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@clerk/nextjs": "^6.39.9",
@@ -26,7 +26,6 @@
     "micro": "^10.0.1",
     "mongoose": "^9.12.1",
     "next": "16.4.6",
-    "next-pwa": "^5.6.0",
     "prettier": "^3.8.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -43,10 +42,9 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "autoprefixer": "10.4.24",
-    "eslint": "8.45.0",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.4.6",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard": "^17.1.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "8.5.33",
     "tailwindcss": "3.3.3",
@@ -76,7 +74,6 @@
     "mongoose",
     "mongodb",
     "lucide-react",
-    "next-pwa",
     "postcss",
     "prettier",
     "react-dom",

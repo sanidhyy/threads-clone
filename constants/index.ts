@@ -71,5 +71,4 @@ export const SITE_DATA: Metadata = {
   keywords: [
     // List of keywords related to your website.
   ],
-  manifest: "/manifest.json",
 };
