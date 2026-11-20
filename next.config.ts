@@ -1,14 +1,8 @@
-const prod = process.env.NODE_ENV === "production";
+import type { NextConfig } from "next";
 
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: !prod,
-});
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
+  agentRules: false,
+  devIndicators: false,
   serverExternalPackages: ["mongoose"],
   images: {
     unoptimized: true,
@@ -33,4 +27,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+export default nextConfig;
