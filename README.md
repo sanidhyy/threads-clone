@@ -70,14 +70,14 @@ threads-clone/
   |- public/
   |- .env.example
   |- .env/.env.local
-  |- .eslintrc.json
   |- .gitignore
   |- bun.lock
   |- components.json
-  |- middleware.ts
-  |- next.config.js
+  |- eslint.config.mjs
+  |- next.config.ts
   |- package.json
   |- postcss.config.js
+  |- proxy.ts
   |- tailwind.config.js
   |- tsconfig.json
   |- vercel.ts
@@ -176,8 +176,8 @@ You might encounter some bugs while using this app. You are more than welcome to
 Useful resources and libraries that are used in My Portfolio
 
 <!--- DEPENDENCIES_START --->
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.31.8
-- [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^1.7.20
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^6.39.9
+- [@clerk/themes](https://www.npmjs.com/package/@clerk/themes): ^2.4.57
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
 - [@radix-ui/react-label](https://www.npmjs.com/package/@radix-ui/react-label): ^2.1.17
 - [@radix-ui/react-menubar](https://www.npmjs.com/package/@radix-ui/react-menubar): ^1.1.16
@@ -194,16 +194,14 @@ Useful resources and libraries that are used in My Portfolio
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
 - [encoding](https://www.npmjs.com/package/encoding): ^0.1.13
-- [eslint](https://www.npmjs.com/package/eslint): 8.45.0
+- [eslint](https://www.npmjs.com/package/eslint): ^9.39.5
 - [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.4.6
-- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^8.8.0
-- [eslint-config-standard](https://www.npmjs.com/package/eslint-config-standard): ^17.1.0
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^10.1.8
 - [eslint-plugin-tailwindcss](https://www.npmjs.com/package/eslint-plugin-tailwindcss): ^3.13.0
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.574.0
 - [micro](https://www.npmjs.com/package/micro): ^10.0.1
 - [mongoose](https://www.npmjs.com/package/mongoose): ^9.12.1
 - [next](https://www.npmjs.com/package/next): 16.4.6
-- [next-pwa](https://www.npmjs.com/package/next-pwa): ^5.6.0
 - [postcss](https://www.npmjs.com/package/postcss): 8.5.33
 - [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
 - [react](https://www.npmjs.com/package/react): 19.2.4
