@@ -24,28 +24,26 @@ export const viewport: Viewport = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   // Render the ClerkProvider component, which provides authentication features
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
-      {/* Set the HTML language to English */}
-      <html lang="en">
-        {/* Set the body class with the Inter font and background color */}
-        <body
-          className={cn(
-            "bg-dark-1 flex items-center justify-center min-h-screen h-full w-full",
-            inter.className,
-          )}
+    <html lang="en">
+      <body
+        className={cn(
+          "bg-dark-1 flex items-center justify-center min-h-screen h-full w-full",
+          inter.className,
+        )}
+      >
+        <ClerkProvider
+          appearance={{
+            baseTheme: dark,
+          }}
         >
           {children} {/* Render the child components within this layout */}
           {/* Render the Toaster component for displaying notifications */}
           <aside>
             <Toaster />
           </aside>
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 };
 

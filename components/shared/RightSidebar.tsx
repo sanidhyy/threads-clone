@@ -1,4 +1,4 @@
-import { currentUser } from "@clerk/nextjs"; // Import the `currentUser` function from the Clerk package.
+import { currentUser } from "@clerk/nextjs/server"; // Import the `currentUser` function from the Clerk package.
 import UserCard from "../cards/UserCard"; // Import the `UserCard` component.
 
 import { fetchCommunities } from "@/lib/actions/community.actions"; // Import the `fetchCommunities` function.

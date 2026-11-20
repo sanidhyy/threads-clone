@@ -1,6 +1,6 @@
 "use server";
 
-import { FilterQuery, SortOrder } from "mongoose";
+import { QueryFilter, SortOrder } from "mongoose";
 import { revalidatePath } from "next/cache";
 
 import Community from "../models/community.model";
@@ -138,7 +138,7 @@ export const fetchUsers = async ({
     const regex = new RegExp(searchString, "i");
 
     // Create an initial query object to filter users.
-    const query: FilterQuery<typeof User> = {
+    const query: QueryFilter<typeof User> = {
       id: { $ne: userId }, // Exclude the current user from the results.
     };
 

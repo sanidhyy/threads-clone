@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
 import { COMMUNITY_TABS } from "@/constants";
 

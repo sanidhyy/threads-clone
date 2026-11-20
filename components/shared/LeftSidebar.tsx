@@ -3,15 +3,14 @@
 // Import necessary libraries and components
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
 
 import { SIDEBAR_LINKS } from "@/constants";
 
 // Define the LeftSidebar component
 const LeftSidebar = () => {
-  // Get the router, pathname from navigation, and userId from Clerk's useAuth
-  const router = useRouter();
+  // Get the pathname from navigation and userId from Clerk's useAuth
   const pathname = usePathname();
   const { userId } = useAuth();
 
@@ -52,7 +51,7 @@ const LeftSidebar = () => {
       <div className="mt-10 px-6">
         <SignedIn>
           {/* Render the SignOutButton for logged-in users */}
-          <SignOutButton signOutCallback={() => router.push("/sign-in")}>
+          <SignOutButton redirectUrl="/sign-in">
             <div className="flex cursor-pointer gap-4 p-4" title="Logout">
               <Image
                 src="/assets/logout.svg"

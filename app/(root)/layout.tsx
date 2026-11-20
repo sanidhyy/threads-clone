@@ -26,13 +26,14 @@ export const viewport: Viewport = {
 // Define the root layout component that wraps the entire application
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <ClerkProvider
+          dynamic
+          appearance={{
+            baseTheme: dark,
+          }}
+        >
           <Topbar /> {/* Render the top navigation bar */}
           <main className="flex flex-row">
             <LeftSidebar /> {/* Render the left sidebar */}
@@ -42,9 +43,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <RightSidebar /> {/* Render the right sidebar */}
           </main>
           <Bottombar /> {/* Render the bottom navigation bar */}
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 };
 
